@@ -1,0 +1,24 @@
+{
+  "name": "rest-homemon",
+  "version": "0.0.0",
+  "description": "Restful API service for HomeMon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craziemac/rest-homemon.git"
+  },
+  "author": "Marcus Landh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craziemac/rest-homemon/issues"
+  },
+  "homepage": "https://github.com/craziemac/rest-homemon",
+  "dependencies": {
+    "sequelize": "~2.0.0-rc4",
+    "mysql": "~2.5.4",
+    "express": "~4.10.6"
+  }
+}
