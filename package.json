@@ -19,6 +19,7 @@
   "dependencies": {
     "sequelize": "~2.0.0-rc4",
     "mysql": "~2.5.4",
-    "express": "~4.10.6"
+    "express": "~4.10.6",
+    "epilogue": "~0.3.2"
   }
 }
