@@ -1,25 +1,33 @@
 {
-  "name": "rest-homemon",
-  "version": "0.0.0",
-  "description": "Restful API service for HomeMon",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/craziemac/rest-homemon.git"
-  },
-  "author": "Marcus Landh",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/craziemac/rest-homemon/issues"
-  },
-  "homepage": "https://github.com/craziemac/rest-homemon",
-  "dependencies": {
-    "sequelize": "~2.0.0-rc4",
-    "mysql": "~2.5.4",
-    "express": "~4.10.6",
-    "epilogue": "~0.3.2"
-  }
+    "name": "rest-homemon",
+    "version": "0.0.0",
+    "description": "Restful API service for HomeMon",
+    "main": "server.js",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/craziemac/rest-homemon.git"
+    },
+    "author": {
+        "name": "Marcus Landh",
+        "email": "marcus.landh@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/craziemac/rest-homemon/issues"
+    },
+    "homepage": "https://github.com/craziemac/rest-homemon",
+    "dependencies": {
+        "mysql": "~2.5.4",
+        "express": "~4.10.6",
+        "memoizee": "0.2.6",
+        "cloneextend": "*"
+    },
+    "engines": {
+        "node": ">= 0.10",
+        "npm": ">= 1.2"
+    }
 }
