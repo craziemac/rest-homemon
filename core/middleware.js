@@ -13,9 +13,6 @@ exports.setup = function setup(app, conf){
     var bodyParser = require('body-parser');
     var errorhandler = require('errorhandler');
 
-/*    conf.application.middleware.forEach(function(val){
-        app.use(express[val]());
-    });*/
     app.use(compress());
     app.use(morgan('combined'));
     app.use(bodyParser.json());
