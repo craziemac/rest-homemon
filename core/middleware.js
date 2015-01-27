@@ -9,7 +9,7 @@ exports.setup = function setup(app, conf){
             database : conf.db.mysql.database
         });
 
-    app.configure(function(){
+/*    app.configure(function(){*/
         conf.application.middleware.forEach(function(val){
             app.use(express[val]());
         });
@@ -20,5 +20,5 @@ exports.setup = function setup(app, conf){
             req.store   = app.locals;
             next();
         });
-    });
+/*    });*/
 };
