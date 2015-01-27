@@ -4,12 +4,13 @@ exports.init = function init(){
         , express = require('express')
         , app     = express()
         , conf    = require('./conf').get(process.env.NODE_ENV)
-        , crypto  = require('crypto')
+/*        , crypto  = require('crypto')
         , auth = express.basicAuth(function(username, password) {
             var cipher = crypto.createCipher('aes-256-cbc', conf.application.salt);
             cipher.update(password, 'utf8', 'base64');
             return ((cipher.final('base64') === conf.application.password) && username === conf.application.username );
-        }, conf.application.realm);
+        }, conf.application.realm);*/
+        , auth = require('./core').basicAuth(conf);
 
     middleware.setup(app, conf);
     router.run(auth, app, conf.application.routes);

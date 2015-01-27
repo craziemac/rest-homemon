@@ -29,7 +29,7 @@ var tool = require('cloneextend'),
             username    : 'clangton',
             password    : 'GR+adJAdWOxFQMLFHAWPig==',
             realm       : 'Authenticated',
-            routes      : ['list'],
+            routes      : ['sensor'],
             middleware  : ['compress','json','urlencoded','logger']
         },
         server:         {
