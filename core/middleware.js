@@ -11,6 +11,7 @@ exports.setup = function setup(app, conf){
     var compress = require('compression');
     var morgan = require('morgan');
     var bodyParser = require('body-parser');
+    var errorhandler = require('errorhandler');
 
 /*    conf.application.middleware.forEach(function(val){
         app.use(express[val]());
@@ -19,7 +20,7 @@ exports.setup = function setup(app, conf){
     app.use(morgan('combined'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(express.errorHandler(conf.application.errorHandler));
+    app.use(errorhandler(conf.application.errorHandler));
     app.use(function(req, res, next) {
         req.mysql   = pool;
         req.cache   = require('memoizee');
