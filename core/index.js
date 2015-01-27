@@ -10,7 +10,7 @@ exports.init = function init(){
             cipher.update(password, 'utf8', 'base64');
             return ((cipher.final('base64') === conf.application.password) && username === conf.application.username );
         }, conf.application.realm);*/
-        , auth = require('./core').basicAuth(conf);
+        , auth = require('./authenticate').basicAuth(conf);
 
     middleware.setup(app, conf);
     router.run(auth, app, conf.application.routes);
