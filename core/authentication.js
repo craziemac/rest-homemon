@@ -29,7 +29,10 @@ exports.basicAuth = function(username, password, conf, crypto) {
 exports.basicAuth = function(conf) {
     return function(req, res, next) {
         var user = basicAuth(req);
-        
+        if (!user) {
+            res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+            return res.send(401);
+        }
         var cipher = crypto.createCipher('aes-256-cbc', conf.application.salt);
         cipher.update(user.pass, 'utf8', 'base64');
         if (!user || !(cipher.final('base64') === conf.application.password) && user.name === conf.application.username ) {
