@@ -1,6 +1,14 @@
 var tool = require('cloneextend'),
     conf = {};
     conf.production = {
+        db:             {
+            mysql:          {
+                host        : 'localhost',
+                user        : 'raspidev',
+                password    : '',
+                database    : 'RaspberryPiDev'
+            }
+        },
         application:    {
             errorHandler: {},
             username    : 'demo',
