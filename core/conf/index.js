@@ -34,8 +34,8 @@ var tool = require('cloneextend'),
     conf.defaults = {
         application:    {
             salt        : '1234567890QWERTY',
-            username    : 'clangton',
-            password    : 'GR+adJAdWOxFQMLFHAWPig==',
+            username    : 'marcus',
+            password    : 'dnEorVXvEsJgjaP1D9QkxA==',
             realm       : 'Authenticated',
             routes      : ['sensor']
         },
