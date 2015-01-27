@@ -38,7 +38,7 @@ var tool = require('cloneextend'),
             password    : 'GR+adJAdWOxFQMLFHAWPig==',
             realm       : 'Authenticated',
             routes      : ['sensor'],
-            middleware  : ['compress','json','urlencoded','logger']
+            middleware  : ['json','urlencoded','logger']
         },
         server:         {
             host        : 'localhost',
