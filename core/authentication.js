@@ -3,6 +3,7 @@ var crypto  = require('crypto');
 
 exports.basicAuth = function(conf) {
     return function(req, res, next) {
+        console.log('%s', req.headers.authorization);
         var user = basicAuth(req);
         if (!user) {
             res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
